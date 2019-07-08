@@ -15,26 +15,29 @@
 
 
 
-### 1.0版操作流程：
-- 数据集处理，将每个scence中的全景图thumbnail.jpg提取出来并按照子文件夹名称重新命名，组成新的数据集文件query_scenceK和gallery_scenceK:
+### 算法包操作流程：
+- 数据集准备，请将数据集按照不同的scene解压缩，并存放于同一个文件夹下：
+  smart_city/
+      scene1_jiading_lib_training/
+          PIC_20190522_100025/
+          PIC_20190522_100255/
+          ...
+          scene1_jiading_lib_training_coordinates.csv
+      scene1_jiading_lib_test/
+          PIC_20190522_100509/
+          PIC_20190522_100546/
+          ...  
+      ...
+  注：scene4的training坐标文件编码格式有问题，请更正后执行后续操作，否则会报UnicodeDecodeError
 
+- 进入算法包 cd upload_code 在terminal中运行main.py:
 ```python
-python datasets_pano.py
+python main.py 
+--root ../smart_city/ 
+--example-result ../example_result.csv 
+--save-dir save_file/ 
+--result-file result.csv
 ```
-
-- gallery特征提取，并按照不同的scence分别存储为datasetK.db:
-```python
-python orb_search/generate_index.py
-```
-
-- 提取query图像特征并与gallery做匹配，输出top6匹配的gallery图像名称及匹配点数，保存为文件query_gallery_search.csv和query_gallery_value.csv:
-```python
-python query_gallery_search.py
-```
-
-- 根据top6（或者不全用）匹配计算query的相机坐标并保存为文件my_result.csv:
-```python
-python coordinate.py
-```
-
-- 注：记得更改文件路径，方法略暴力，提升空间很大，诸君加油
+  注：root传入数据集所在的地址，建议添加绝对路径；example_result传入组委会给定的example_result.csv文件用于校验最终的输出文件格式；save_dir定义中间文件的存储路径；result_file定义最终结果文件的存储路径。root和example_result是必须传入的参数，save_dir和result_file有默认值，可不设置。
+  
+- 获得结果文件result.csv，您可在设置的路径找到文件，或在main.py同一级目录下找到文件。
