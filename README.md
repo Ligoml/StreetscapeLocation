@@ -39,7 +39,7 @@
     --root path/to/smart_city-data \
     --example-result ../example_result.csv \
     --save-dir save_file/ \
-    --result-file result.csv \
+    --result-file result.csv 
     
   注：root传入数据集所在的地址，建议添加绝对路径；example_result传入组委会给定的example_result.csv文件用于校验最终的输出文件格式；save_dir定义中间文件的存储路径；result_file定义最终结果文件的存储路径。root和example_result是必须传入的参数，save_dir和result_file有默认值，可不设置。
   
