@@ -21,14 +21,14 @@
     
     smart_city/ \
     |---scene1_jiading_lib_training/ \
-    |xxxxx|---PIC_20190522_100025/ \
-    |xxxxx|---PIC_20190522_100255/ \
-    |xxxxx|---.../ \
-    |xxxxx|---scene1_jiading_lib_training_coordinates.csv \
+    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---PIC_20190522_100025/ \
+    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---PIC_20190522_100255/ \
+    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---.../ \
+    |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---scene1_jiading_lib_training_coordinates.csv \
     |---scene1_jiading_lib_test/ \
-    xxxxxx|---PIC_20190522_100509/ \
-    xxxxxx|---PIC_20190522_100546/ \
-    xxxxxx|---.../
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---PIC_20190522_100509/ \
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---PIC_20190522_100546/ \
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---.../
 
   注：scene4的training坐标文件编码格式有问题，请更正后执行后续操作，否则会报UnicodeDecodeError
 
