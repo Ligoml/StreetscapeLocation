@@ -15,21 +15,21 @@
 
 
 ### 环境配置
-python3.5
-opencv3.4.2
+python3.5 \
+opencv3.4.2 \
 
 ### 所需依赖库
-numpy
-os
-argparse
-glob
-csv
-asyncio
-uvloop
-tinydb
-operator
-concurrent
-multiprocessing
+numpy \
+os \
+argparse \
+glob \
+csv \
+asyncio \
+uvloop \
+tinydb \
+operator \
+concurrent \
+multiprocessing 
 
 
 ### 算法包操作流程
