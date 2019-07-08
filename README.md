@@ -16,7 +16,7 @@
 
 ### 环境配置
 python3.5 \
-opencv3.4.2 \
+opencv3.4.2 
 
 ### 所需依赖库
 numpy \
