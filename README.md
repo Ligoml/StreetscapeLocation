@@ -32,7 +32,7 @@ concurrent
 multiprocessing
 
 
-### 算法包操作流程：
+### 算法包操作流程
 - 数据集准备，请将数据集按照不同的scene解压缩，并存放于同一个文件夹下：
 .. code-block:: none
     
@@ -50,7 +50,7 @@ multiprocessing
 
   注：scene4的training坐标文件编码格式有问题，请更正后执行后续操作，否则会报UnicodeDecodeError
 
-- 进入算法包 cd upload_code 在terminal中运行main.py:
+- 进入算法包 cd upload_code 在terminal中运行main.py：
     
     python main.py \
     --root path/to/smart_city-data \
