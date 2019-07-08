@@ -14,6 +14,23 @@
 - [ ] 点云匹配准确定位（复赛）[参考](https://blog.csdn.net/wishchin/article/details/74279021)  
 
 
+### 环境配置
+python3.5
+opencv3.4.2
+
+### 所需依赖库
+numpy
+os
+argparse
+glob
+csv
+asyncio
+uvloop
+tinydb
+operator
+concurrent
+multiprocessing
+
 
 ### 算法包操作流程：
 - 数据集准备，请将数据集按照不同的scene解压缩，并存放于同一个文件夹下：
