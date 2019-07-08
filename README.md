@@ -19,21 +19,20 @@
 - 数据集准备，请将数据集按照不同的scene解压缩，并存放于同一个文件夹下：
 .. code-block:: none
     
-    smart_city/
-        scene1_jiading_lib_training/
-            PIC_20190522_100025/
-            PIC_20190522_100255/
-            .../
-            scene1_jiading_lib_training_coordinates.csv
-        scene1_jiading_lib_test/
-            PIC_20190522_100509/
-            PIC_20190522_100546/
-            .../
+    smart_city/ \
+    |---scene1_jiading_lib_training/ \
+    |    |---PIC_20190522_100025/ \
+    |    |---PIC_20190522_100255/ \
+    |    |---.../ \
+    |    |---scene1_jiading_lib_training_coordinates.csv \
+    |---scene1_jiading_lib_test/ \
+         |---PIC_20190522_100509/ \
+         |---PIC_20190522_100546/ \
+         |---.../
 
   注：scene4的training坐标文件编码格式有问题，请更正后执行后续操作，否则会报UnicodeDecodeError
 
 - 进入算法包 cd upload_code 在terminal中运行main.py:
-.. code-block:: bash
     
     python main.py \
     --root path/to/smart_city-data \
