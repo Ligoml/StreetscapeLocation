@@ -17,27 +17,30 @@
 
 ### 算法包操作流程：
 - 数据集准备，请将数据集按照不同的scene解压缩，并存放于同一个文件夹下：
-  smart_city/
-      scene1_jiading_lib_training/
-          PIC_20190522_100025/
-          PIC_20190522_100255/
-          ...
-          scene1_jiading_lib_training_coordinates.csv
-      scene1_jiading_lib_test/
-          PIC_20190522_100509/
-          PIC_20190522_100546/
-          ...  
-      ...
+.. code-block:: none
+    
+    smart_city/
+        scene1_jiading_lib_training/
+            PIC_20190522_100025/
+            PIC_20190522_100255/
+            .../
+            scene1_jiading_lib_training_coordinates.csv
+        scene1_jiading_lib_test/
+            PIC_20190522_100509/
+            PIC_20190522_100546/
+            .../
+
   注：scene4的training坐标文件编码格式有问题，请更正后执行后续操作，否则会报UnicodeDecodeError
 
 - 进入算法包 cd upload_code 在terminal中运行main.py:
-```python
-python main.py 
---root ../smart_city/ 
---example-result ../example_result.csv 
---save-dir save_file/ 
---result-file result.csv
-```
+.. code-block:: bash
+    
+    python main.py \
+    --root path/to/smart_city-data \
+    --example-result ../example_result.csv \
+    --save-dir save_file/ \
+    --result-file result.csv \
+    
   注：root传入数据集所在的地址，建议添加绝对路径；example_result传入组委会给定的example_result.csv文件用于校验最终的输出文件格式；save_dir定义中间文件的存储路径；result_file定义最终结果文件的存储路径。root和example_result是必须传入的参数，save_dir和result_file有默认值，可不设置。
   
 - 获得结果文件result.csv，您可在设置的路径找到文件，或在main.py同一级目录下找到文件。
